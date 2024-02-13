@@ -1,0 +1,170 @@
+﻿@model FisioWebFront.Entities.ClienteOBJ
+@{
+    ViewBag.Title = "CambiarClave";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+
+
+   <body>
+       
+			<section class="page_breadcrumbs ls ms columns_margin_0">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 ">
+							<ol class="breadcrumb">
+	
+									<li>
+										<a href="index.html">
+											Inicio
+										</a>
+									</li>
+									<li>
+										<a href="#">Mi Cuenta</a>
+									</li>
+
+									<li class="active">Registrar Mascota</li>
+							
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+
+                <section class="ls section_padding_top_65 section_padding_bottom_100">
+                <div class="container">
+            @using (Html.BeginForm("ActualizarCliente", "Cliente", FormMethod.Post))
+                    {
+                    <div class="row">
+
+                        <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                            <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                                <h3>Actualizar Perfil</h3>
+                            </div>
+
+
+
+                                <hr class="divider_1_270 divider_30 left">
+                                <h3 class="section_header small bottommargin_30">
+                                    
+
+                                </h3>
+
+                        @Html.HiddenFor(model => model.id_usuario)
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Nombre
+                                    </p>
+                                    <div class="contact-form-email">
+                                @Html.TextBoxFor(model => model.nombre_cliente, new{
+                                            @class = "form-control", @required = "required",
+                                            @size="30", @value="", @name="nombre_cliente",
+                                             @id="nombre_cliente", @pattern="^[a-zA-Z]+$"
+                                   
+                                            })
+                                    </div>
+                                </div>
+                                    <div class="col-sm-6">
+                                    <p>
+                                        Primer apellido
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                          @Html.TextBoxFor(model => model.apellido1_cliente, new{
+                                            @class = "form-control", @required = "required",
+                                            @size="30", @value="", @name="apellido1_cliente",
+                            @id="apellido1_cliente" , @pattern="^[a-zA-Z]+$"
+                                   
+                                            })
+                                    
+                                    </div>
+                                </div>
+                                                <div class="col-sm-6">
+                                    <p>
+                                        Segundo apellido
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                @Html.TextBoxFor(model => model.apellido2_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="apellido2_cliente",
+                            @id="apellido2_cliente", @pattern="^[a-zA-Z]+$"
+
+                            })
+
+
+                                              </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Cédula
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                @Html.TextBoxFor(model => model.cedula_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="cedula_cliente",
+                            @id="cedula_cliente", @pattern=@"^[a-zA-Z0-9\S]+$"
+
+                            })
+                                    
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Teléfono
+                                    </p>
+                                    <div class="contact-form-email">
+                               
+                                                   @Html.TextBoxFor(model => model.telefono_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="telefono_cliente",
+                            @id="telefono_cliente" , @pattern =@"^([^\\S]|(?!e))\d{8,12}([^\\S]|$)$"
+
+                            })
+                                    
+                                    </div>
+                                </div>
+
+                                     <div class="col-sm-12">
+
+                                    <input class="theme_button color1" type="submit" value="Actualizar Usuario" onclick="MostrarAlerta()">
+
+                                </div>
+
+                                <div class="col-sm-12">	
+                                    <a href="@Url.Action("EditarMascotas","Mascota")" class="theme_button color2">Actualizar Mascotas</a>					
+                                </div>
+
+                        </div>
+
+                    </div>
+                    }
+                    </div>
+                   
+            </section>
+
+
+
+        <script src="~/fluffypaw/js/compressed.js"></script>
+        <script src="~/fluffypaw/js/main.js"></script>
+        <script src="~/fluffypaw/js/switcher.js"></script>
+       <script src="~/js/sweetalert2.all.min.js"></script>
+       <script>
+           function MostrarAlerta() 
+           {
+               Swal.fire('Cliente Actualizado')
+           }
+       </script>
+
+   </body>
+
+
+    <!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+ </html>

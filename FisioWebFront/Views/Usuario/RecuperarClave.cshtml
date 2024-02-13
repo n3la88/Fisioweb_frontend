@@ -1,0 +1,107 @@
+﻿@model FisioWebFront.Entities.UsuarioObj
+@using reCAPTCHA.MVC
+@{
+    ViewBag.Title = "RecuperarClave";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html class="no-js">
+
+    <body>
+    
+            <section class="page_breadcrumbs ls ms columns_margin_0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <ol class="breadcrumb">
+
+                                <li>
+                                    <a href="index.html">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Mi Cuenta</a>
+                                </li>
+                                <li class="active">Recuparar Contraseña</li>
+                               
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ls section_padding_top_20 section_padding_bottom_30">
+                <div class="container">
+                    @using (Html.BeginForm("RecuperarClave", "Usuario", FormMethod.Post))
+                    {
+                        <div class="row">
+
+                            <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                                <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                                    <h3>Bienvenido</h3>
+                                </div>
+
+                                <h3 class="section_header small bottommargin_30">
+                                    Recuperar
+                                    <strong>Contraseña</strong>
+                                </h3>
+
+
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Correo electrónico
+                                    </p>
+                                    <div class="contact-form-email">
+                                        <input type="email" aria-required="true" size="30" value="" name="correo_usuario" id="correo_usuario" class="form-control" placeholder="Correo electrónico"
+                                       pattern="^[a-zA-Z0-9._+-]+@("@")[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <div class="g-recaptcha" data-sitekey="6Lcmi6EkAAAAANCdsLOC49BsMiTMPZgiZdQcssQ2"></div>
+                                </div>
+
+                                <div class="col-sm-12">
+
+                                    <input class="theme_button color1" type="submit" value="Recuperar Contraseña">
+
+                                </div>
+
+
+                          
+                                   <div class="col-sm-8">
+                            <hr class="divider_1_270 divider_30 left">
+
+                                <p>
+                                    ¿No tiene una cuenta?
+                                </p>
+                                <a href="@Url.Action("RegistrarCliente","Cliente")" class="theme_button color2">
+                                    Registrarse
+
+                                </a>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                    }
+                </div>
+            </section>
+
+
+       <script src="~/fluffypaw/js/compressed.js"></script>
+       <script src="~/fluffypaw/js/main.js"></script>
+       <script src="~/fluffypaw/js/switcher.js"></script>
+       <script src="~/js/sweetalert2.all.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+      
+    </body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

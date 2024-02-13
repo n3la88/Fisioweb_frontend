@@ -1,0 +1,185 @@
+﻿@model FisioWebFront.Entities.MascotaRazaEspecieOBJ
+@{
+	ViewBag.Title = "RegistrarMascota";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+  <body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+			<section class="page_breadcrumbs ls ms columns_margin_0">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 ">
+							<ol class="breadcrumb">
+	
+									<li>
+										<a href="index.html">
+											Inicio
+										</a>
+									</li>
+									<li>
+										<a href="#">Mi Cuenta</a>
+									</li>
+
+									<li class="active">Registrar Mascota</li>
+							
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="ls section_padding_top_65 section_padding_bottom_100">
+				<div class="container">
+					@using (Html.BeginForm("RegistrarMascota", "Mascota", FormMethod.Post))
+					{
+					<div class="row">
+
+						<div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+							<div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+								<h3>Registro</h3>
+							</div>
+
+
+							<form class="contact-form row columns_padding_5" method="post" action="https://html.modernwebtemplates.com/">
+
+
+								<hr class="divider_1_270 divider_30 left">
+
+								<h3 class="section_header small bottommargin_30">
+									Registrar Mascota
+
+								</h3>
+
+								<div class="col-sm-6">
+									<p>
+										Nombre Mascota
+									</p>
+									<div class="contact-form-email">
+
+										<input type="text" aria-required="true" size="30" value="" 
+										name="nombre_mascota" id="nombre_mascota" class="form-control"
+									   placeholder="Nombre de la mascota" pattern="^[a-zA-Z]+$" required>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<p>
+										Edad Mascota
+									</p>
+									<div class="contact-form-email">
+
+											<input type="number" aria-required="true" 
+											size="30" value="" 
+											name="edad_mascota" id="edad_mascota"
+										   class="form-control" placeholder="Edad apróximada" pattern="^\d+(?!\d*e)\d*$" required>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<p>
+										Detalle de la Mascota
+									</p>
+									<div class="contact-form-email">
+
+											<textarea type="number" aria-required="true" size="60"
+									   value="" name="detalles_mascota" id="detalles_mascota" 
+									   class="form-control" placeholder="Detalle de la Mascota" required >
+								   </textarea>
+									</div>
+								</div>
+
+							<div class="col-sm-6">
+								<p>
+									Especie de la mascota
+								</p>
+
+								<div class="col-6 col-12-xsmall">
+
+									@Html.DropDownListFor(model => model.id_especie, ViewBag.ComboIdEspecie as List<SelectListItem>,new{id = "id_especie"})
+
+								</div>
+							</div>
+
+						    <div>
+								@await Html.PartialAsync("_MascotasPartial")
+								@Html.HiddenFor(model => model.id_raza)
+							</div>
+
+							<script type="text/javascript">
+								$("form").on("submit", function (e) {
+									e.preventDefault();
+									$("#id_raza").val($("#Raza").val());
+								    $("form").submit();
+								});
+							</script>
+					
+							<script>
+								$(document).ready(function(){
+									$("#id_especie").change(function(){
+									
+										var id = $('#id_especie').val();
+										
+										$.ajax({
+											type:"get",
+											url:"/Mascota/ObtenerRaza?id_especie="+id,
+											
+											error: function (error) {
+												alert('ERROR ' + error);
+											},
+											success: function (result) {
+												$("#Raza").html(result);
+											}
+										})
+									});
+
+								})
+							</script>
+
+							 <div class="col-sm-12">
+
+										<input class="theme_button color1" onsubmit="MostrarAlerta()" on type="submit" value="Registrar mascota">
+
+                              </div>
+
+							</form>
+	
+
+						</div>
+
+					</div>
+					 }
+				</div>
+
+
+			</section>
+
+
+        <script src="~/fluffypaw/js/compressed.js"></script>
+        <script src="~/fluffypaw/js/main.js"></script>
+        <script src="~/fluffypaw/js/switcher.js"></script>
+		<script src="~/js/sweetalert2.all.min.js"></script>
+		
+
+        <script>
+        function MostrarAlerta()
+        {
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Mascota Registrada',
+            showConfirmButton: false,
+            timer: 1500})
+        }
+        </script>
+
+  </body>
+
+
+    <!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

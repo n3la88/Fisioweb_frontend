@@ -1,0 +1,119 @@
+﻿@model IEnumerable<FisioWebFront.Entities.FaqObj>
+@{
+    ViewBag.Title = "VerListaFaq";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@section scriptsProyecto{
+
+    @* Scrips para que el table este en Espanol *@
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#ListaFAQ').DataTable({
+                "language": {
+                    "url": "https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                }
+            });
+        });
+
+    </script>
+}
+
+    <html>
+
+    <body>
+
+        <section class="page_breadcrumbs ls ms columns_margin_0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <ol class="breadcrumb">
+
+                            <li>
+                                <a href="index.html">
+                                    Administrador
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Opciones</a>
+                            </li>
+
+                            <li class="active">Lista de preguntas frecuentes</li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ls section_padding_top_65 section_padding_bottom_100">
+            <div class="container">
+
+
+                <h2>Preguntas y respuestas registradas</h2>
+
+                <br><br/>
+                <input type="button" value="Agregar nueva pregunta y respuesta" class="theme_button color2 aligncenter" onclick="location.href='@Url.Action("RegistrarFaq", "Faq")'">
+                <br><br />
+                <div class="row">
+                    <div class="col-sm-10">
+                        <table id="ListaFAQ" class="display" style="text-align:center">
+                            <thead>
+                                <tr>
+                                    <th>Preguntas</th>
+                                    <th>Respuestas</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
+                            </thead>
+                            <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pregunta_titulo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pregunta_respuesta)
+                                    </td>
+
+
+                                    <td>
+                                        <input type="button" value="Editar" class="theme_button color2" onclick="location.href='@Url.Action("EditarFaq", "Faq", new { q = item.id_ayuda })'">
+
+                                    </td>
+                                    <td>
+                                        <input type="button" value="Eliminar" class="theme_button color1" onclick="location.href='@Url.Action("EliminarFaq", "Faq", new { q = item.id_ayuda })'">
+
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="~/fluffypaw/js/compressed.js"></script>
+    <script src="~/fluffypaw/js/main.js"></script>
+    <script src="~/fluffypaw/js/switcher.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

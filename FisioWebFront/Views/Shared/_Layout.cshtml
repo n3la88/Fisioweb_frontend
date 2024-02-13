@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<!--<![endif]-->
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/ por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:18:47 GMT -->
+<head>
+	<title>FisioVet</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="stylesheet" href="~/css/site.css">
+	<link rel="stylesheet" href="~/fluffypaw/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/fluffypaw/css/main.css" id="color-switcher-link">
+	<link rel="stylesheet" href="~/fluffypaw/css/animations.css">
+	<link rel="stylesheet" href="~/fluffypaw/css/fonts.css">
+	<script src="~/fluffypaw/js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--FullCalendar -->
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+	<script src="~/libs/fullcalendar-6.1.4/packages/core/locales/es.global.js"></script>
+    <script src="~/libs/fullcalendar-6.1.4/packages/core/locales/es.global.min.js"></script>
+	<!-- Full Calendar -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.print.css" media="print" />
+	<!-- Include moment-->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<!-- qTip -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" />
+	<!-- Full Calendar -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.print.css" media="print" />
+
+
+	@RenderSection("ScriptsAtTop",required:false)
+
+</head>
+
+<header class="page_header cs header_color">
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledpor="search_modal" id="search_modal">
+		<div class="widget widget_search">
+			<form method="get" class="searchform form-inline" action="https://html.modernwebtemplates.com/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Buscar</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<section class="page_toplogo ls table_section table_section_md section_padding_15">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 text-center text-md-left">
+							<a href="@Url.Action("index","Home")"
+								class="logo">
+
+								<img src="~/fluffypaw/images/FV_LogoP.png" width="60" height="60" viewBox="0 0 60 60">
+								<span class="logo-meta">
+									<span class="site-name grey">
+										Fisio<strong>Vet</strong>
+									</span>
+									<span class="small-text">Acupuntura, Terapia</span>
+									<br />
+									<span class="small-text">
+										y Rehabilitacion Veterinaria
+									</span>
+								</span>
+							</a>
+						</div>
+
+						<div class="col-md-9 text-center text-md-right">
+							<div class="media inline-block text-left">
+								<div class="media-left media-middle fontsize_20">
+									<i class="fa fa-map-marker"></i>
+								</div>
+								<div class="media-body media-middle">
+									<span class="small-text lightfont">Ubicacion</span>
+									<p class="fontsize_18 highlight semibold">Curridabat, San José</p>
+								</div>
+							</div>
+							<div class="media inline-block text-left">
+								<div class="media-left media-middle fontsize_20">
+									<i class="fa fa-clock-o"></i>
+								</div>
+								<div class="media-body media-middle">
+									<span class="small-text lightfont">Horario de Lunes a Sábado</span>
+									<p class="fontsize_18 highlight semibold">8:00am a 5:00pm</p>
+								</div>
+							</div>
+							<div class="media inline-block text-left">
+								<div class="media-left media-middle fontsize_20">
+									<i class="fa fa-phone"></i>
+								</div>
+								<div class="media-body media-middle">
+									<span class="small-text lightfont">Telefono</span>
+									<p class="fontsize_18 highlight semibold">(506)2271 0789</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<div class="container">
+				<div class="row display_table columns_padding_0">
+					<div class="col-md-10 col-xs-4 display_table_cell">
+						<!-- main nav start -->
+						<nav class="mainmenu_wrapper">
+							<ul class="mainmenu nav sf-menu">
+								<li class="active">
+									<a href="@Url.Action("index","Home")">Inicio</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("VerSobreNosotros","Informacion")">Sobre Nosotros</a>
+
+								</li>
+								
+								<li>
+									<a href="#">Agendar Cita</a>
+									<ul>
+										@{
+									if (Context.Session.GetString("usuario") != null)
+									{
+									<li><a href="@Url.Action("CalendarioCitas","Citas")">Citas Disponibles</a></li>
+									}
+									else {
+										<li><a href="@Url.Action("Login","Usuario")">Iniciar Sesión</a></li>
+										}
+								
+									
+								}
+										</ul>
+									
+									
+								</li>
+								<!-- eof pages -->
+								<li>
+									<a href="@Url.Action("VerServicios","Servicios")">Nuestros Servicios</a>
+	
+								</li>
+
+								<!-- blog -->
+								<li>
+									<a href="@Url.Action("VerFAQ","FAQ")">Preguntas frecuentes</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("VerContacto","Informacion")">Contacto</a>
+								</li>
+
+
+								<li>
+									<a href="#">Mi cuenta</a>
+									<ul>
+
+									@{
+											if ((Context.Session.GetString("usuario") != null) & (Context.Session.GetString("rol") == "2") || (Context.Session.GetString("rol") == "1"))
+											{
+											<li><a href="@Url.Action("CambiarClave","Usuario")">Cambio de Contraseña</a></li>
+
+											<li><a href="@Url.Action("ActualizarCliente","Cliente")">Ajustes de Perfil</a></li>
+										
+											<li><a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Logout">Cerrar Sesión</a></li>
+											}
+										else if ((Context.Session.GetString("usuario") != null) & (Context.Session.GetString("rol") == "3")) 
+										{
+											<li><a href="@Url.Action("VerMascotas","Mascota")">Mis Mascotas</a></li>
+										
+											<li><a href="@Url.Action("RegistrarMascota","Mascota")">Registrar Mascota</a></li>
+											
+											<li><a href="@Url.Action("CambiarClave","Usuario")">Cambio de Contraseña</a></li>
+
+											<li><a href="@Url.Action("ActualizarCliente","Cliente")">Ajustes de Perfil</a></li>
+										
+											<li><a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Logout">Cerrar Sesión</a></li>
+										}
+										else
+										{
+											<li><a href="@Url.Action("Login","Usuario")">Iniciar Sesión</a></li>
+											<li><a href="@Url.Action("RecuperarClave","Usuario")">Recuperar contraseña</a></li>
+										}
+									}
+									</ul>
+								</li>
+								
+								@{
+								if ((Context.Session.GetString("usuario") != null) & (Context.Session.GetString("rol") == "1"))
+								{
+								<li>
+								<a href="#">Admin</a>
+								<ul>
+								<li><a href="@Url.Action("RegistrarEmpleado","Empleado")">Registrar Empleados</a></li>
+								<li>
+								<a href="@Url.Action("VerListaClientes","Admin")">Ver clientes</a>
+								</li>
+								<li>
+								<a href="@Url.Action("VerListaServicios","Servicios")">Ver servicios</a>
+								</li>
+								<li>
+								<a href="@Url.Action("VerListaFaq","Faq")">Ver preguntas frecuentes</a>
+								</li>
+								<li>
+								<a href="#">Reportes</a>
+								<ul>
+								<li><a href="#">Reportes historial citas</a></li>
+								<li><a href="#">Reportes asistencia doctores</a></li>
+								<li><a href="#">Reporte de citas confirmadas y canceladas</a></li>
+								<li><a href="#">Reporte de cantidad mascotas registradas</a></li>
+								<li><a href="#">Reporte de cantidad citas registradas </a></li>
+								<li><a href="#">Reportes Bitacora Errores</a></li>
+								</ul>
+								</li>
+								<li>
+								<a href="#">Gráficas</a>
+								</li>
+								<li>
+								<a href="#">Calendario Admin</a>
+								</li>
+
+								</ul>
+								</li>
+								}
+
+								 }
+
+								 @{
+										if ((Context.Session.GetString("usuario") != null) & (Context.Session.GetString("rol") == "2"))
+									    {
+										<li class="nav-item">
+											<a class="nav-link text-dark">
+										  @Context.Session.GetString("nombreEmpleado") @Context.Session.GetString("apellidoEmpleado") </a></li>
+										}
+										else {
+												<li class="nav-item">
+											<a class="nav-link text-dark">
+										  @Context.Session.GetString("nombreCliente") @Context.Session.GetString("apellidoCliente") </a></li>
+										}
+								     }
+
+
+							</ul>
+						</nav>
+						<!-- eof main nav -->
+						<span class="toggle_menu">
+							<span></span>
+						</span>
+					</div>
+					<div class="col-md-2 col-xs-8 text-right display_table_cell">
+						<span class="greylinks">
+							<a href="https://www.facebook.com/fisiovetcr" class="social-icon soc-facebook"></a>
+							<a href="https://www.instagram.com/fisiovetcr/" class="social-icon soc-instagram"></a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="~/fluffypaw/js/compressed.js"></script>
+	<script src="~/fluffypaw/js/main.js"></script>
+	<script src="~/fluffypaw/js/switcher.js"></script>
+	<link rel="stylesheet" href="~/css/site.css">
+	
+	<link href="~/css/sweetalert2.min.css" rel="stylesheet" />
+	<script src="~/js/sweetalert2.all.min.js"></script>
+
+
+
+</header>
+
+<div class="container body-content">
+	<partial>
+		@Html.Partial("_NotificationPanel")
+	</partial>
+	@RenderBody()
+	@RenderSection("scriptsProyecto", required: false)
+	<hr />
+</div>
+
+
+<footer class="ds page_footer section_padding_top_50 section_padding_bottom_65">
+	<div class="container">
+		<div class="row bottommargin_5">
+			<div class="col-md-3 col-sm-6 to_animate" data-animation="scaleAppear">
+				<div class="widget widget_text topmargin_5">
+					<a href="index.html" class="logo">
+						<img src="~/fluffypaw/images/FV_LogoP.png" width="60" height="60" viewBox="0 0 60 60">
+						<span class="logo-meta">
+							<span class="site-name grey">
+								Fisio<strong>Vet</strong>
+							</span>
+							<span class="small-text">Clinica Veterinaria</span>
+						</span>
+					</a>
+					<p class="bottommargin_10">
+						Servicio de Fisioterapia y Rehabilitación Canina y Felina.
+					</p>
+					<div class="inline-block darklinks">
+						<a class="social-icon soc-facebook theme-icon" href="https://www.facebook.com/fisiovetcr" title="Facebook"></a>
+						<a class="social-icon soc-instagram theme-icon" href="https://www.instagram.com/fisiovetcr/" title="Instagram"></a>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 to_animate" data-animation="scaleAppear">
+				<div class="widget widget_text topmargin_20">
+					<h4 class="fontsize_24 bottommargin_35">
+						Contacto
+					</h4>
+					<div class="media">
+						<div class="media-left fontsize_20">
+							<i class="fa fa-map-marker highlight"></i>
+						</div>
+						<div class="media-body">
+							Costado suroeste del estadio de Curridabat, San José
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left fontsize_20">
+							<i class="fa fa-clock-o highlight"></i>
+						</div>
+						<div class="media-body">
+							De Lunes a Sábado
+							<br>8:00am a 5:00pm
+						</div>
+
+					</div>
+
+					<div class="media">
+						<div class="media-left fontsize_20">
+							<i class="fa fa-phone highlight"></i>
+						</div>
+						<div class="media-body">
+							(506) 2271 0789
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</footer>
+
+			<section class="page_copyright ls section_padding_20">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<p class="darklinks">
+								&copy; 2022 FiosioVet. Creado con
+								<i class="fa fa-heart-o highlight"></i> por
+								<a href="http://modernwebtemplates.com/" class="semibold">MWTemplates</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+@RenderSection("ScriptsAtBottom",required:false)
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/ por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:20:54 GMT -->

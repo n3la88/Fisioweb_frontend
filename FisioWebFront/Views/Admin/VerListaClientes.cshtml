@@ -1,0 +1,147 @@
+﻿@model IEnumerable<FisioWebFront.Entities.ClienteUsuarioOBJ>
+@{
+    ViewBag.Title = "VerListaClientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@section scriptsProyecto{
+
+    @* Scrips para que el table este en Espanol *@
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#ListaClientes').DataTable({
+                "language": {
+                    "url": "https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                }
+            });
+        });
+
+    </script>
+}
+
+<html>
+
+<body>
+
+    <section class="page_breadcrumbs ls ms columns_margin_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <ol class="breadcrumb">
+
+                        <li>
+                            <a href="index.html">
+                                Administrador
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Opciones</a>
+                        </li>
+
+                        <li class="active">Lista de Clientes</li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ls section_padding_top_65 section_padding_bottom_100">
+        <div class="container">
+
+
+            <h2>Clientes Registrados</h2>
+            <div class="row">
+                <div class="col-sm-10">
+                    <table id="ListaClientes" class="display" style="text-align:center">
+                        <thead>
+                            <tr>
+
+                                <th>Nombre</th>
+                                <th>I Apellido</th>
+                                <th>II Apellido</th>
+                                <th>Cedula</th>
+                                <th>Correo</th>
+                                <th>Estado</th>
+                                <th>Ver Mas</th>
+                                <th>Opciones</th>
+                                <th>Mascotas</th>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                             
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombre_cliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.apellido1_cliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.apellido2_cliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.cedula_cliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.correo_usuario)
+                                    </td>
+
+
+                                    @if (item.id_estado == 1)
+                                    {
+
+                                     <td>
+                                        Activo
+                                    </td>
+                                        }
+
+                                    else {
+                                            <td>
+                                                Desactivado
+                                            </td>
+                                    }
+                              
+                                    <td>
+                                        <input type="button" value="Detalles" class="theme_button color1" onclick="location.href='@Url.Action("VerCliente", "Admin", new { q = item.id_usuario })'">
+                                    </td>
+
+                                    <td>
+                                        <input type="button" value="Editar" class="theme_button color2" onclick="location.href='@Url.Action("EditarCliente", "Admin", new { q = item.id_usuario })'">
+                                    </td>
+
+                                    <td>
+                                        <input type="button" value="Mascotas" class="theme_button color3" onclick="location.href='@Url.Action("VerMascotasAdmin", "Mascota", new { q = item.id_cliente })'">
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="~/fluffypaw/js/compressed.js"></script>
+    <script src="~/fluffypaw/js/main.js"></script>
+    <script src="~/fluffypaw/js/switcher.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

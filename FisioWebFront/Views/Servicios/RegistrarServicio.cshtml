@@ -1,0 +1,125 @@
+﻿@model FisioWebFront.Entities.ServiciosObj
+@{
+	ViewBag.Title = "RegistrarServicio";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+  <body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+			<section class="page_breadcrumbs ls ms columns_margin_0">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 ">
+							<ol class="breadcrumb">
+	
+									<li>
+										<a href="index.html">
+											Inicio
+										</a>
+									</li>
+									<li>
+										<a href="#">Mi Cuenta</a>
+									</li>
+
+									<li class="active">Registrar Servicios</li>
+							
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="ls section_padding_top_65 section_padding_bottom_100">
+				<div class="container">
+			@using (Html.BeginForm("RegistrarServicio", "Servicios", FormMethod.Post))
+					{
+					<div class="row">
+
+						<div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+							<div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+								<h3>Registro</h3>
+							</div>
+
+
+							<form class="contact-form row columns_padding_5" method="post" action="https://html.modernwebtemplates.com/">
+
+
+								<hr class="divider_1_270 divider_30 left">
+
+								<h3 class="section_header small bottommargin_30">
+									Registrar Servicio
+
+								</h3>
+
+								<div class="col-sm-6">
+									<p>
+										Servicio
+									</p>
+									<div class="contact-form-email">
+
+										<textarea type="text" aria-required="true" size="30" value=""
+									   name="servicio_descripcion" id="servicio_descripcion" class="form-control"
+										  placeholder="Nombre del servicio" pattern="^[a-zA-Z]+$" required>  </textarea>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<p>
+										Detalles del servicio
+									</p>
+								<div class="contact-form-email">
+
+									<textarea type="text" aria-required="true" size="30" value=""
+									   name="servicio_detalle" id="servicio_detalle" class="form-control"
+									   placeholder="Detalles del servicio" pattern="^[a-zA-Z]+$" required>
+
+											  </textarea>
+
+								</div>
+								</div>
+
+	
+
+			
+
+					
+							 <div class="col-sm-12">
+
+										<input class="theme_button color1" onsubmit="MostrarAlerta()" on type="submit" value="Registrar servicio">
+
+                                </div>
+								      <div class="col-sm-12">
+                            <input type="button" value="Volver Atras" class="theme_button color1" onclick="location.href='@Url.Action("VerListaServicios", "Servicios")'">
+
+
+                        </div>
+
+							</form>
+	
+
+						</div>
+
+					</div>
+					 }
+				</div>
+
+
+			</section>
+
+
+        <script src="~/fluffypaw/js/compressed.js"></script>
+        <script src="~/fluffypaw/js/main.js"></script>
+        <script src="~/fluffypaw/js/switcher.js"></script>
+		<script src="~/js/sweetalert2.all.min.js"></script>
+
+
+  </body>
+
+
+    <!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

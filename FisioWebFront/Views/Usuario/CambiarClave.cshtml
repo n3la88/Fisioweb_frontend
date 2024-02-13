@@ -1,0 +1,115 @@
+﻿@model FisioWebFront.Entities.UsuarioObj
+@{
+    ViewBag.Title = "CambiarClave";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+
+<body>
+            <section class="page_breadcrumbs ls ms columns_margin_0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <ol class="breadcrumb">
+
+                                <li>
+                                    <a href="index.html">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Mi Cuenta</a>
+                                </li>
+
+                                <li class="active">Cambio de Contraseña</li>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ls section_padding_top_65 section_padding_bottom_100">
+                <div class="container">
+                    @using (Html.BeginForm("CambiarClave", "Usuario", FormMethod.Post))
+                    {
+                        <div class="row">
+
+                            <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                                <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                                    <h3>Bienvenido</h3>
+                                </div>
+
+                                <h3 class="section_header small bottommargin_30">
+                                    Cambiar
+                                    <strong>Contraseña</strong>
+                                </h3>
+
+                                
+                                <div class="col-sm-8">
+                                    <p>
+                                       Contraseña Anterior
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                        <input type="password" aria-required="true" size="30" value="" name="contrasena_anterior" id="contrasena_anterior" class="form-control"
+                                       pattern=^[^\s]+$ required placeholder="Digite su contraseña Actual">
+                                    </div>
+                      
+                                </div>
+
+
+                                <div class="col-sm-8">
+                                    <p>
+                                       Nueva Contraseña
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                        <input type="password" aria-required="true" size="30" value="" name="contrasena_nueva" id="contrasena_nueva" class="form-control" placeholder="Digite su nueva Contraseña"
+                                       pattern=^[^\s]+$ required>
+                                    </div>
+                        
+                                </div>
+
+
+                                <div class="col-sm-8">
+                                    <p>
+                                        Confirme su Contraseña 
+                                 </p>
+                                    <div class="contact-form-email">
+
+                                        <input type="password" aria-required="true" size="30" value="" name="contrasena_confirmacion" id="contrasena_confirmacion" class="form-control" placeholder="Digite su nueva Contraseña"
+                                       pattern=^[^\s]+$ required>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-12">
+
+                                    <input class="theme_button color1" type="submit" value="Aceptar">
+
+
+                                </div>
+
+                          
+                                <br>
+
+                            </div>
+
+
+                        </div>
+                              }
+                    </div>
+                </section>
+
+          
+        <script src="~/fluffypaw/js/compressed.js"></script>
+        <script src="~/fluffypaw/js/main.js"></script>
+        <script src="~/fluffypaw/js/switcher.js"></script>
+
+    </body>
+
+    <!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+    </html>

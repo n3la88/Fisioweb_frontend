@@ -1,0 +1,226 @@
+﻿@model FisioWebFront.Entities.CorreoOBJ
+@{
+	ViewBag.Title = "VerContacto";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledpor="search_modal" id="search_modal">
+		<div class="widget widget_search">
+			<form method="get" class="searchform form-inline" action="https://html.modernwebtemplates.com/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+			<section class="page_breadcrumbs ls ms columns_margin_0">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 ">
+							<ol class="breadcrumb">
+								<li>
+									<a href="index.html">
+										Inicio
+									</a>
+								</li>
+
+								<li class="active">Contacto</li>
+								 
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="ls section_padding_top_65 section_padding_bottom_100">
+				<div class="container">
+										@using (Html.BeginForm("VerContacto", "Informacion", FormMethod.Post))
+					{
+						<div class="row">
+
+						<div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+							<h3 class="section_header small bottommargin_30">
+								Enviar
+								<strong>Correo</strong>
+							</h3>
+
+							<form class="contact-form row columns_padding_5" method="post" action="https://html.modernwebtemplates.com/">
+
+								<div class="col-sm-6">
+									<div class="contact-form-name">
+										<label for="name">
+											Nombre Completo
+											<span class="required">*</span>
+										</label>
+
+										 @Html.TextBoxFor(model => model.nombre, new { @type="text", @required="required",
+										@size="30", @value="" ,@name="name" ,@id="name", @class="form-control", @placeholder="Nombre"})
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-subject">
+										<label for="subject">
+											Asunto
+											<span class="required">*</span>
+										</label>
+											@Html.TextBoxFor(model => model.subject, new {@type="text", @required="required", @size="30",
+											@value="", @name="", @id="subject", @class="form-control", placeholder="Asunto"})
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-phone">
+										<label for="phone">
+											Telefono/Celular
+											<span class="required">*</span>
+										</label>
+											@Html.TextBoxFor(model => model.telefono, new {@type="text", @required="required", @size="30",
+										@value="", @name="", @id="telefono", @class="form-control", placeholder="Telefono",
+										@pattern =@"^([^\\S]|(?!e))\d{8,12}([^\\S]|$)$"})
+										</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-email">
+										<label for="email">
+											Email
+											<span class="required">*</span>
+										</label>
+											@Html.TextBoxFor(model => model.correo_to, new {@type="text", @required="required", @size="30",
+										@value="", @name="", @id="email", @class="form-control", placeholder="Email",
+										@pattern=@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"	})
+										</div>
+								</div>
+								<div class="col-sm-12">
+
+									<div class="contact-form-message">
+										<label for="message">Mensaje</label>
+											@Html.TextAreaFor(model => model.contenido, new { @required="required" ,@rows="6" ,@cols="45" ,@name="message", @id="message", @class="form-control", @placeholder="Mensaje"})
+									</div>
+								</div>
+
+								<div class="col-sm-12">
+
+									<div class="contact-form-submit topmargin_30">
+											<button onsubmit="MostrarAlerta()" on type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color1">Enviar Mensaje</button>
+									</div>
+								</div>
+
+
+							</form>
+						</div>
+
+						<div class="col-md-4 to_animate" data-animation="scaleAppear">
+
+							<h3 class="section_header small bottommargin_30">
+								Informacion de
+								<strong>Contacto</strong>
+							</h3>
+
+							<div>
+								<div class="media contact_teaser">
+									<div class="media-left media-middle fontsize_20">
+										<i class="fa fa-map-marker"></i>
+									</div>
+									<div class="media-body media-middle lightfont">
+										<span class="small-text">Ubicacion</span>
+										<p class="fontsize_18 highlight semibold">Curridabat, San José</p>
+									</div>
+								</div>
+
+								<div class="media contact_teaser">
+									<div class="media-left media-middle fontsize_20">
+										<i class="fa fa-clock-o"></i>
+									</div>
+									<div class="media-body media-middle lightfont">
+										<span class="small-text">Telefono de Contacto</span>
+										<p class="fontsize_18 highlight semibold">(506) 2271 0789</p>
+									</div>
+								</div>
+
+								<div class="media contact_teaser">
+									<div class="media-left media-middle fontsize_20">
+										<i class="fa fa-pencil"></i>
+									</div>
+									<div class="media-body media-middle lightfont">
+										<span class="small-text">Nuestro Email</span>
+										<p class="fontsize_18 highlight semibold">info@fisiovetcr.com</p>
+									</div>
+								</div>
+
+
+
+								<div class="media contact_teaser">
+									<div class="media-left media-middle fontsize_20">
+										<span class="greylinks">
+											<a href="https://www.facebook.com/fisiovetcr" class="social-icon soc-facebook"></a>
+										</span>
+									</div>
+									<div class="media-body media-middle lightfont">
+										<a href="https://www.facebook.com/fisiovetcr" class="fontsize_18 highlight semibold">Facebook</a>
+									</div>
+								</div>
+
+
+								<div class="media contact_teaser">
+									<div class="media-left media-middle fontsize_20">
+										<span class="greylinks">
+											<a href="https://www.instagram.com/fisiovetcr/" class="social-icon soc-instagram"></a>
+										</span>
+									</div>
+									<div class="media-body media-middle lightfont">
+										<a href="https://www.instagram.com/fisiovetcr/" class="fontsize_18 highlight semibold">Instagram</a>
+									</div>
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+					</div>
+					}
+				</div>
+			</section>
+
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+	<script src="~/fluffypaw/js/compressed.js"></script>
+	<script src="~/fluffypaw/js/main.js"></script>
+	<script src="~/fluffypaw/js/switcher.js"></script>
+	<script src="~/js/sweetalert2.all.min.js"></script>
+
+	<script>
+		function MostrarAlerta() {
+			Swal.fire({
+				position: 'top-end',
+				icon: 'success',
+				title: 'Consulta Enviada',
+				showConfirmButton: false,
+				timer: 1500
+			})
+		}
+	</script>
+
+	</script>
+
+
+</body>

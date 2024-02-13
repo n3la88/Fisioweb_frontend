@@ -1,0 +1,160 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FisioWebFront
+build_property.RootNamespace = FisioWebFront
+build_property.ProjectDir = C:\Users\hades\OneDrive\Documentos\fisioweb-frontend\FisioWebFront\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\hades\OneDrive\Documentos\fisioweb-frontend\FisioWebFront
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Admin/EditarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Admin/VerCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmVyQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Admin/VerListaClientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmVyTGlzdGFDbGllbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Citas/CalendarioCitas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcQ2FsZW5kYXJpb0NpdGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Cliente/ActualizarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBY3R1YWxpemFyQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Cliente/RegistrarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxSZWdpc3RyYXJDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Empleado/RegistrarEmpleado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cUmVnaXN0cmFyRW1wbGVhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/FAQ/EditarFaq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEVkaXRhckZhcS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/FAQ/EliminarFaq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEVsaW1pbmFyRmFxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/FAQ/RegistrarFaq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXFJlZ2lzdHJhckZhcS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/FAQ/VerFAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXFZlckZBUS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/FAQ/VerListaFaq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXFZlckxpc3RhRmFxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Informacion/VerContacto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYWNpb25cVmVyQ29udGFjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Informacion/VerSobreNosotros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYWNpb25cVmVyU29icmVOb3NvdHJvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Mascota/EditarMascotas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzY290YVxFZGl0YXJNYXNjb3Rhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Mascota/RegistrarMascota.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzY290YVxSZWdpc3RyYXJNYXNjb3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Mascota/VerMascota.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzY290YVxWZXJNYXNjb3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Mascota/VerMascotas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzY290YVxWZXJNYXNjb3Rhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Mascota/VerMascotasAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzY290YVxWZXJNYXNjb3Rhc0FkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Servicios/EditarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXEVkaXRhclNlcnZpY2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Servicios/EliminarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXEVsaW1pbmFyU2VydmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Servicios/RegistrarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFJlZ2lzdHJhclNlcnZpY2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Servicios/VerListaServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFZlckxpc3RhU2VydmljaW9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Servicios/VerServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFZlclNlcnZpY2lvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Shared/_CalendarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYWxlbmRhclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Shared/_MascotasPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXNjb3Rhc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Shared/_NotificationPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYW5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Usuario/CambiarClave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYW1iaWFyQ2xhdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Usuario/RecuperarClave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSZWN1cGVyYXJDbGF2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hades/OneDrive/Documentos/fisioweb-frontend/FisioWebFront/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5dv6j6boxn

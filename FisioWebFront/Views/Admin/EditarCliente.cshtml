@@ -1,0 +1,178 @@
+﻿@model FisioWebFront.Entities.ClienteUsuarioOBJ
+@{
+    ViewBag.Title = "EditarCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+<body>
+
+    <section class="page_breadcrumbs ls ms columns_margin_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <ol class="breadcrumb">
+
+                        <li>
+                            <a href="index.html">
+                                Admin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Opciones</a>
+                        </li>
+
+                        <li class="active">Ver Clientes</li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ls section_padding_top_65 section_padding_bottom_60">
+        <div class="container">
+              @using (Html.BeginForm("EditarCliente", "Admin", FormMethod.Post))
+            {
+            <div class="row">
+
+                <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                    <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                        <h3>Informacion del Cliente</h3>
+                    </div>
+
+                    <hr class="divider_1_270 divider_30 left">
+                    <h3 class="section_header small bottommargin_30">
+                    </h3>
+
+                    @Html.HiddenFor(model => model.id_usuario)
+                    @Html.HiddenFor(model => model.id_cliente)
+                    <div class="col-sm-6">
+                        <p>
+                            Nombre
+                        </p>
+                        <div class="contact-form-email">
+                            @Html.TextBoxFor(model => model.nombre_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="nombre_cliente",
+                            @id="nombre_cliente" , @pattern="^[a-zA-Z]+$"
+
+                            })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            Primer Apellido
+                        </p>
+                        <div class="contact-form-email">
+                            @Html.TextBoxFor(model => model.apellido1_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="apellido1_cliente",
+                            @id="apellido1_cliente", @pattern="^[a-zA-Z]+$"
+                            })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            Segundo Apellido
+                        </p>
+                        <div class="contact-form-email">
+                            @Html.TextBoxFor(model => model.apellido2_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="apellido2_cliente",
+                            @id="apellido2_cliente", @pattern="^[a-zA-Z]+$"
+
+                            })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            Cedula/Identificacion
+                        </p>
+                        <div class="contact-form-email">
+
+                            @Html.TextBoxFor(model => model.cedula_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="cedula_cliente",
+                            @id="cedula_cliente",  @pattern=@"^[a-zA-Z0-9\S]+$"
+
+                            })
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>
+                            Correo Cliente
+                        </p>
+                        <div class="contact-form-email">
+
+                            @Html.TextBoxFor(model => model.correo_usuario, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="correo_usuario",
+                            @id="correo_usuario",  @pattern=@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+                            @type="email"
+                            })
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>
+                            Telefono 
+                        </p>
+                        <div class="contact-form-email">
+
+                            @Html.TextBoxFor(model => model.telefono_cliente, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="telefono_cliente",
+                            @id="telefono_cliente",  @pattern=@"^[a-zA-Z0-9\S]+$"
+
+                            })
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>
+                            Estado de Usuario
+                        </p>
+
+                            @Html.DropDownListFor(model => model.id_estado, new SelectList(new[]
+                        {
+                        new { Value = 1, Text = "Activo" },
+                        new { Value = 2, Text = "Desactivado" }, 
+                        }, "Value", "Text"))
+
+                    </div>
+                </div>
+                    <div class="col-sm-12">
+
+                        <input class="theme_button color2" type="submit" value="Actualizar Cliente" onclick="MostrarAlerta()">
+
+                    </div>
+
+                    <div class="col-sm-12">
+                        <input type="button" value="Volver Atras" class="theme_button color1" onclick="location.href='@Url.Action("VerListaClientes", "Admin")'">
+                    </div>
+
+            </div>
+            }
+        </div>
+
+    </section>
+
+    <script src="~/fluffypaw/js/compressed.js"></script>
+    <script src="~/fluffypaw/js/main.js"></script>
+    <script src="~/fluffypaw/js/switcher.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

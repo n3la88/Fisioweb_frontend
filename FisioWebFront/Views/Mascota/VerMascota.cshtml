@@ -1,0 +1,155 @@
+﻿@model FisioWebFront.Entities.MascotaRazaEspecieOBJ
+@{
+    ViewBag.Title = "EditarMascotas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+<body>
+
+    <section class="page_breadcrumbs ls ms columns_margin_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <ol class="breadcrumb">
+
+                        <li>
+                            <a href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Mi Cuenta</a>
+                        </li>
+
+                        <li class="active">Mis mascotas</li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ls section_padding_top_65 section_padding_bottom_60">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                    <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                        <h3>Detalles de la Mascota</h3>
+                    </div>
+
+                    <hr class="divider_1_270 divider_30 left">
+                    <h3 class="section_header small bottommargin_30">
+                    </h3>
+
+                    @Html.HiddenFor(model => model.id_mascota)
+                    @Html.HiddenFor(model => model.id_cliente)
+
+                    <div class="col-sm-6">
+                        <p>
+                            Nombre
+                        </p>
+                        <div class="contact-form-email">
+                            @Html.TextBoxFor(model => model.nombre_mascota, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="nombre_mascota",
+                            @id="nombre_mascota", @disabled="disabled"
+
+                            })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            Raza
+                        </p>
+                        <div class="contact-form-email">
+                            @Html.TextBoxFor(model => model.descripcion_raza, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="descripcion_raza",
+                            @id="descripcion_raza", @disabled="disabled"
+
+                            })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            Edad Aproximada
+                        </p>
+                        <div class="contact-form-email">
+
+                            @Html.TextBoxFor(model => model.edad_mascota, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="edad_mascota",
+                            @id="edad_mascota", @disabled="disabled"
+
+                            })
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <p>
+                            Detalles Adicionales
+                        </p>
+                        <div class="contact-form-email">
+
+                            @Html.TextAreaFor(model => model.detalles_mascota, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="detalles_mascota",
+                            @id="detalles_mascota", @disabled="disabled"
+
+                            })
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="contact-form-email">
+                            @if (Context.Session.GetString("rol") == "1" | Context.Session.GetString("rol") == "2")
+                            {
+                                <input type="button" value="Volver Atras" class="theme_button color1" onclick="location.href='@Url.Action("VerListaClientes", "Admin")'">
+
+                            }
+
+                            else
+                            {
+
+                                <input type="button" value="Volver Atras" class="theme_button color1" onclick="location.href='@Url.Action("VerMascotas", "Mascota")'">
+
+                            }
+
+                            <input type="button" value="Editar" class="theme_button color2" onclick="location.href='@Url.Action("EditarMascotas", "Mascota", new { q =  Model.id_mascota })'">
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="~/fluffypaw/js/compressed.js"></script>
+    <script src="~/fluffypaw/js/main.js"></script>
+    <script src="~/fluffypaw/js/switcher.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+
+    </script>
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

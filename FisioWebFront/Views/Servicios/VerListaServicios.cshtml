@@ -1,0 +1,118 @@
+﻿@model IEnumerable<FisioWebFront.Entities.ServiciosObj>
+@{
+    ViewBag.Title = "VerListaServicios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@section scriptsProyecto{
+
+    @* Scrips para que el table este en Espanol *@
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#ListaServicios').DataTable({
+                "language": {
+                    "url": "https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                }
+            });
+        });
+
+    </script>
+}
+
+<html>
+
+<body>
+
+    <section class="page_breadcrumbs ls ms columns_margin_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <ol class="breadcrumb">
+
+                        <li>
+                            <a href="index.html">
+                                Administrador
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Opciones</a>
+                        </li>
+
+                        <li class="active">Lista de Servicios</li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ls section_padding_top_65 section_padding_bottom_100">
+        <div class="container">
+
+
+            <h2>Servicios Registrados</h2>
+                <br><br />
+            <input type="button" value="Agregar nuevo servicio" class="theme_button color2 aligncenter" onclick="location.href='@Url.Action("RegistrarServicio", "Servicios")'">
+                <br><br/>
+            <div class="row">
+                <div class="col-sm-10">
+                        <table id="ListaServicios" class="display" style="text-align:center">
+                        <thead>
+                            <tr>
+                                <th>Servicios</th>
+                                <th>Detalles</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                             
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.servicio_descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.servicio_detalle)
+                                    </td>
+                              
+ 
+                                    <td>
+                                        <input type="button" value="Editar" class="theme_button color2" onclick="location.href='@Url.Action("EditarServicio", "Servicios", new { q = item.id_servicio })'">
+
+                                    </td>
+                                    <td>
+                                        <input type="button" value="Eliminar" class="theme_button color1" onclick="location.href='@Url.Action("EliminarServicio", "Servicios", new { q = item.id_servicio })'">
+
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                  
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="~/fluffypaw/js/compressed.js"></script>
+    <script src="~/fluffypaw/js/main.js"></script>
+    <script src="~/fluffypaw/js/switcher.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

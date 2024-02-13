@@ -1,0 +1,123 @@
+﻿@model FisioWebFront.Entities.FaqObj
+@{
+    ViewBag.Title = "EliminarFaq";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+<body>
+    <!--[if lt IE 9]>
+        <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+
+    <section class="page_breadcrumbs ls ms columns_margin_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <ol class="breadcrumb">
+
+                        <li>
+                            <a href="index.html">
+                                Admin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+
+                        <li class="active">Eliminar pregunta y respuesta</li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ls section_padding_top_65 section_padding_bottom_100">
+        <div class="container">
+            @using (Html.BeginForm("BorrarFaq", "Faq", FormMethod.Post))
+            {
+                <div class="row">
+
+                    <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                        <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                            <h3>Eliminar Pregunta y respuesta</h3>
+                        </div>
+
+                        <hr class="divider_1_270 divider_30 left">
+                        <h3 class="section_header small bottommargin_30">
+                            ¿Está seguro de eliminar este pregunta y su respuesta?
+                        </h3>
+
+                        @Html.HiddenFor(model => model.id_ayuda)
+
+
+                        <div class="col-sm-12">
+                            <p>
+                                Servicio
+                            </p>
+                            <div class="contact-form-email">
+
+
+                                @Html.TextAreaFor(model => model.pregunta_titulo, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="pregunta_titulo",
+                            @id="pregunta_titulo",
+                            @style="padding: 0px; margin: 0px;text-align: left;",
+                            @pattern=@"^[a-zA-Z0-9\S]+$", @disabled="disabled"
+                            })
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <p>
+                                Descripción del servicio
+                            </p>
+                            <div class="contact-form-email">
+
+                                @Html.TextAreaFor(model => model.pregunta_respuesta, new{
+                            @class = "form-control", @required = "required",
+                            @size="30", @value="", @name="pregunta_respuesta",
+                            @id="pregunta_respuesta",
+                            @style="padding: 0px; margin: 0px;text-align: left;",
+                            @pattern=@"^[a-zA-Z0-9\S]+$", @disabled="disabled"
+                            })
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <input class="theme_button color2" type="submit" value="Aceptar">
+
+                        </div>
+
+
+                        <div class="col-sm-12">
+                            <input type="button" value="Cancelar" class="theme_button color1" onclick="location.href='@Url.Action("VerListaFaq", "Faq")'">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+        </div>
+
+    </section>
+
+    <script src="~/fluffypaw/js/compressed.js"></script>
+    <script src="~/fluffypaw/js/main.js"></script>
+    <script src="~/fluffypaw/js/switcher.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+</html>

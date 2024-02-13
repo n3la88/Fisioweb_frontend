@@ -1,0 +1,167 @@
+﻿@model FisioWebFront.Entities.ClienteOBJ
+@using reCAPTCHA.MVC
+@{
+    ViewBag.Title = "RegistrarEmpleado";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js">
+
+   <body>
+               <section class="page_breadcrumbs ls ms columns_margin_0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <ol class="breadcrumb">
+
+                            <li>
+                                <a href="index.html">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Admin</a>
+                            </li>
+
+                            <li class="active">Registrar Empleado</li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section class="ls section_padding_top_20 section_padding_bottom_30">
+                <div class="container">
+                    @using (Html.BeginForm("RegistrarEmpleado", "Empleado", FormMethod.Post))
+                    {
+                    <div class="row">
+
+                        <div class="col-md-8 to_animate" data-animation="scaleAppear">
+
+                            <div class="col-sm-12 to_animate" data-animation="slideRight" data-delay="150">
+                            <h3>Registro de Usuario</h3>
+                            </div>
+                                <div class="col-sm-6">
+                                    <p>
+                                        Correo electrónico
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                    <input type="email" aria-required="true" size="30" value="" name="correo_usuario" id="correo_usuario"
+                                     class="form-control" placeholder="Correo electrónico" pattern="^[a-zA-Z0-9._+-]+@("@")[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Contraseña
+                                    </p>	
+                                    <div class="contact-form-password">
+
+                                <input type="password" aria-required="true" size="30" value="" name="contrasena_usuario" id="contrasena_usuario" class="form-control" placeholder="La contraseña será enviada al correo" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Nombre del empleado
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                <input type="text" aria-required="true" size="30" value="" name="nombre_empleado" id="nombre_empleado" class="form-control"
+                                   placeholder="Nombre" pattern="^[a-zA-Z]+$" required>
+                                    </div>
+                                </div>
+                                    <div class="col-sm-6">
+                                    <p>
+                                        Primer apellido
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                <input type="text" aria-required="true" size="30" value="" name="apellido1_empleado" id="apellido1_empleado"
+                                   class="form-control" placeholder="Primer apellido" pattern="^[a-zA-Z]+$" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>
+                                        Segundo apellido
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                <input type="text" aria-required="true" size="30" value="" name="apellido2_empleado"
+                                   id="apellido2_empleado" class="form-control" placeholder="Segundo apellido" pattern="^[a-zA-Z]+$" required>
+                                    </div>
+                                </div>
+                        <div class="col-sm-6">
+                            <p>
+                                Puesto a desempeñar
+                            </p>
+                            <div class="contact-form-email">
+
+                                <input type="text" aria-required="true" size="30" value="" name="puesto_empleado"
+                                   id="puesto_empleado" class="form-control" placeholder="Puesto del empleado" pattern="^[a-zA-Z]+$" required>
+                            </div>
+                        </div>
+                                <div class="col-sm-6">
+                                    <p>
+                                        Cédula
+                                    </p>
+                                    <div class="contact-form-email">
+
+                                <input type="text" aria-required="true" size="30" value="" name="cedula_empleado" id="cedula_empleado"
+                                   class="form-control" placeholder="Cédula" pattern="^\w+$" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <p>
+                                        Teléfono
+                                    </p>
+                                    <div class="contact-form-email">
+                                    <input type="tel" aria-required="true" size="30" value=""
+                                   name="telefono_empleado" id="telefono_empleado" class="form-control"
+                                       placeholder="Teléfono" pattern="^(?!\S*e\S*)\s*\d{8,12}\s*$" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="g-recaptcha" data-sitekey="6Lcmi6EkAAAAANCdsLOC49BsMiTMPZgiZdQcssQ2"></div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <input class="theme_button color1" type="submit" value="Registrar empleado"/>
+                                </div>
+
+                                <div class="col-sm-12">	
+                                    <a href="#" class="theme_button color2">Reiniciar</a>					
+                                </div>
+
+                        </div>
+
+                    </div>
+                    }
+                    </div>
+                   
+            </section>
+
+
+        <script src="~/fluffypaw/js/compressed.js"></script>
+        <script src="~/fluffypaw/js/main.js"></script>
+        <script src="~/fluffypaw/js/switcher.js"></script>
+       <script src="~/js/sweetalert2.all.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+
+       <script>
+           function MostrarAlerta() 
+           {
+               Swal.fire('Empleado Registrado')
+           }
+       </script>
+
+   </body>
+
+
+    <!-- Mirrored from html.modernwebtemplates.com/fluffypaw/contact.html por HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 17:22:08 GMT -->
+ </html>
